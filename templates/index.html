@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Clip Downloader</title>
+</head>
+<body>
+    <h1>YouTube Clip Downloader</h1>
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <!-- Form to input the clip URL -->
+    <form method="POST">
+        <label for="clip_url">YouTube Clip URL:</label>
+        <input type="text" id="clip_url" name="clip_url" placeholder="Enter the clip URL" required>
+        <button type="submit">Download Clip</button>
+    </form>
+</body>
+</html>
